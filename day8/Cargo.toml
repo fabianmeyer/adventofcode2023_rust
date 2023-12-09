@@ -1,0 +1,12 @@
+[package]
+name = "day8"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+itertools = { workspace = true }
+regex = { workspace = true, features = ["unicode"] }
+num = { workspace = true }
+
+[[bin]]
+name = "day8"
