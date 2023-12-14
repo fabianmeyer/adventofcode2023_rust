@@ -16,15 +16,6 @@ fn main() {
     match result {
         Ok(input) => {
             let universe = expand(input);
-            for row in &universe {
-                for col in row {
-                    print!("{}", match col {
-                        Void(_) => '.',
-                        Galaxy => '#'
-                    });
-                }
-                print!("{}", '\n');
-            }
             let galaxies = galaxies(&universe);
             let galaxy_pairs = pairs(galaxies);
             let distances = galaxy_pairs.into_iter().map(|(a, b)| distance(&universe, a, b)).sum::<usize>();
